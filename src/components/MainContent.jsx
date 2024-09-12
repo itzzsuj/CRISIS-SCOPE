@@ -24,10 +24,7 @@ function MainContent() {
         <ServicesSection />
         <NewsUpdateSection />
         
-        {/* Add a Login button */}
-        <button onClick={handleLoginClick} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">
-          Login
-        </button>
+        
       </div>
 
       {/* Footer with no padding or margin, full-width */}
