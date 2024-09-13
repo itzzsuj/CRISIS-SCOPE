@@ -23,8 +23,6 @@ function MainContent() {
         <AboutSection />
         <ServicesSection />
         <NewsUpdateSection />
-        
-        
       </div>
 
       {/* Footer with no padding or margin, full-width */}

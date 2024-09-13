@@ -62,7 +62,7 @@ const Login = () => {
               navigate("/admin_Dashboard");
               break;
             case "User":
-              navigate("/user_dashboard");
+              navigate("/UserDashboard");
               break;
             case "Rescue Team":
               navigate("/rescue_dashboard");
