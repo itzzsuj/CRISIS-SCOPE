@@ -5,14 +5,7 @@ import { getFirestore, doc, getDoc } from "firebase/firestore";
 import { getStorage } from "firebase/storage";  // Add Firebase Storage
 
 // Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyDK_P1zSvkMbLd9ZIi2_IxBEYTU1r88zjk",
-  authDomain: "login-auth-60ebb.firebaseapp.com",
-  projectId: "login-auth-60ebb",
-  storageBucket: "login-auth-60ebb.appspot.com",  // Include storage bucket
-  messagingSenderId: "402940395956",
-  appId: "1:402940395956:web:cd3102948715779d2772e1"
-};
+//to be written
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
