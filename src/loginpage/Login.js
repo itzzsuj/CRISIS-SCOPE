@@ -20,13 +20,13 @@ const Login = () => {
       return;
     }
 
-    if (isRegister && (usertype === "User" || usertype === "Rescue Team")) {
-      // Register flow for User or Rescue Team
+    if (isRegister && (usertype === "User" || usertype === "Rescue Team" || usertype === "Admin")) {
+      // Register flow for User, Rescue Team, or Admin
       try {
         const userCredential = await createUserWithEmailAndPassword(auth, email, password);
         alert("Registration successful");
 
-        // Optional: Save additional user data in Firestore
+        // Save additional user data in Firestore based on usertype
         await addUserDataToFirestore(userCredential.user.uid, email, usertype);
 
         navigate("/"); // Redirect to home or dashboard
@@ -36,7 +36,6 @@ const Login = () => {
     } else {
       // Login flow
       try {
-        // Log in the user with Firebase Auth
         const userCredential = await signInWithEmailAndPassword(auth, email, password);
         alert("Login successful");
 
@@ -52,20 +51,20 @@ const Login = () => {
         } else {
           querySnapshot.forEach((doc) => {
             const userData = doc.data();
-            console.log("User data:", userData); // Optionally log or store user data
-            localStorage.setItem("userType", usertype); // Save user type locally for later use
+            console.log("User data:", userData);
+            localStorage.setItem("userType", usertype); // Save user type locally
           });
 
           // Navigate based on user type
           switch (usertype) {
             case "Admin":
-              navigate("/admin_Dashboard");
+              navigate("/AdminDashboard");
               break;
             case "User":
               navigate("/UserDashboard");
               break;
             case "Rescue Team":
-              navigate("/rescue_dashboard");
+              navigate("/RescueDashboard");
               break;
             default:
               navigate("/");
@@ -77,10 +76,10 @@ const Login = () => {
     }
   };
 
-  // Optional: Function to add user data to Firestore upon registration
+  // Function to add user data to Firestore upon registration
   const addUserDataToFirestore = async (uid, email, usertype) => {
     try {
-      const userDocRef = collection(db, usertype === "User" ? "Users" : "RescueTeam");
+      const userDocRef = collection(db, usertype === "Admin" ? "Admins" : usertype === "User" ? "Users" : "RescueTeam");
       await addDoc(userDocRef, {
         uid: uid,
         email: email,
@@ -140,7 +139,7 @@ const Login = () => {
             </button>
           </div>
         </form>
-        {(usertype === "User" || usertype === "Rescue Team") && (
+        {(usertype === "User" || usertype === "Rescue Team" || usertype === "Admin") && (
           <div className="flex justify-center mt-4">
             <button
               className="text-blue-500 underline"
