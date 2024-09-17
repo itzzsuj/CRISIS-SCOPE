@@ -1,8 +1,8 @@
-#Crisis-Scope: Disaster Management Website
+# Crisis-Scope: Disaster Management Website
 
 This project, Crisis-Scope, is a disaster management website built using React, with Firebase as the backend store. Users can log in, send rescue requests, and interact with a rescue team. Rescue teams receive the requests in real-time, while admins can view all the requests and access a heat map representing disaster-affected areas.
 
-#Table of Contents
+# Table of Contents
 
 Demo
 Features
@@ -17,11 +17,11 @@ Usage
 Contributing
 License
 
-#Demo
+# Demo
 
 You can view a live demo of Crisis-Scope here (link to demo).
 
-#Features
+# Features
 
 Login System: Users can log in and send rescue requests.
 Real-time Rescue Alerts: Rescue teams receive user requests in real-time.
@@ -31,7 +31,7 @@ Firebase Backend: Handles all data storage and retrieval.
 Responsive Design: Compatible with mobile, tablet, and desktop devices.
 Available Scripts
 
-In the project directory, you can run:
+# In the project directory, you can run:
 
 npm start
 npm test
@@ -41,9 +41,9 @@ Firebase Integration
 
 Crisis-Scope uses Firebase to store user data and rescue requests. Users log in and interact with the rescue team, while admins can manage the entire process through a dedicated panel.
 
-Installation
+# Installation
 
-To clone and run this project, you'll need Git, Node.js, and npm:
+To clone and run this project, you'll need Git and npm:
 
 bash
 Copy code
@@ -58,16 +58,18 @@ npm install
 
 # Start the development server
 npm start
-Usage
+
+# Usage
 
 Login as a user or rescue team.
 Send Requests to the rescue team with relevant information.
 Admins can monitor the situation through a centralized dashboard with access to all incoming requests and heat map data.
-Contributing
+
+# Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request with your improvements.
 
-License
+# License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
