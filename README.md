@@ -47,7 +47,8 @@ React Documentation
 
 #### Advanced Features
 
-**Code Splitting**
+
+# Code Splitting
 Optimize load times by splitting code into smaller bundles. Learn more here.
 
 # Analyzing the Bundle Size
