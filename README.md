@@ -45,7 +45,7 @@ To explore further, check out the official documentation:
 Create React App Documentation
 React Documentation
 
-#### Advanced Features
+#### Advanced Features:
 # Code Splitting
 Optimize load times by splitting code into smaller bundles. Learn more here.
 
