@@ -4,7 +4,6 @@ This project, Crisis-Scope, is a disaster management website built using React, 
 
 # Table of Contents
 
-
 1.Demo
 2. Features
 3. Available Scripts
